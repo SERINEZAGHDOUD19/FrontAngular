@@ -1,0 +1,73 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Client </h3>
+    <form (ngSubmit) = "onSubmit()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+          <label for="inputAddress">User name</label>
+        <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)] = "client.username" id="inputusername" placeholder="user name">
+    
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Password</label>
+        <input type="password"
+        class="form-control"
+        name="password"
+        [(ngModel)]="client.password"
+        required
+        minlength="6"
+        #password="ngModel">
+      </div>
+    </div>
+    <div class="form-group">
+     
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control"  [ngModelOptions]="{standalone: true}" id="inputEmail" placeholder="Email" [(ngModel)] = "client.email">
+        
+     
+    </div>
+  
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress">full name</label>
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)] = "client.nom" id="inputname" placeholder=" nom">
+      
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputcin">Cin</label>
+          <input type="text"
+          class="form-control"
+          name="cin"
+          [(ngModel)]="client.cin"
+          
+          minlength="8"
+         >
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress">matricule Fiscale</label>
+          <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)] = "client.matriculeFiscale" id="inputmatriculeFiscale" placeholder=" matricule Fiscale">
+      
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputcin">registre Commerciale</label>
+          <input type="text"
+          class="form-control"
+          name="registreCommerciale"
+          [(ngModel)]="client.registreCommerciale"
+          placeholder=" registre Commerciale"
+          
+         >
+        </div>
+      </div>
+    
+    <button type="submit" class="btn btn-info" style="height:50px;width:200px ;margin-left: 250px">add</button>
+    <table border="0">
+      <tr>
+ <td> <a href="" class="btn btn-secondary btn-lg " role="button" aria-disabled="false" style="height:50px;width:200px ;margin-right: 350px"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home</a></td>
+ <td><a role="button" class="btn btn-secondary btn-lg"  onClick="history.go(-1);"style="height:50px;width:200px ;margin-right: 150px" ><i class="fa fa-undo" aria-hidden="true"> Back</i></a></td>
+</tr>
+  </table>
+</form>
+</div>
+
